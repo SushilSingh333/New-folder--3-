@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
 
@@ -580,46 +580,129 @@
       </div>
     </section>
 
-    <!-- ================= TESTIMONIALS (Aisev grid + Ainox) ================= -->
-    <section class="testi dark section" id="testimonials">
+    <!-- ================= TESTIMONIALS (AAJneeti card-deck style) ================= -->
+    <section class="testi section" id="testimonials">
+      <div class="testi__dotbg" aria-hidden="true"></div>
+      <div class="testi__warm" aria-hidden="true"></div>
       <div class="wrap">
-        <div class="center-head">
-          <div class="testi__mark" data-reveal>”</div>
-          <p class="kicker kicker--center" data-reveal><i>↗</i>Testimonials</p>
-          <h2 class="h-big" data-split>What Our Clients Say</h2>
-          <p class="testi__rating" data-reveal><b>4.5+</b> <span class="stars">★★★★★</span> Rated on Google</p>
+        <div class="testi__head">
+          <div>
+            <p class="tlabel" data-reveal><i></i>Testimonials<i></i></p>
+            <h2 class="testi__h2" data-split>What Our Clients Say</h2>
+          </div>
+          <p class="gbadge" data-reveal>
+            <span class="gbadge__g"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#4285f4" d="M22.5 12.2c0-.8-.1-1.4-.2-2H12v3.9h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2-1.9 3.2-4.6 3.2-7.9z"/><path fill="#34a853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.2 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#fbbc04" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8z"/><path fill="#ea4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg></span>
+            <span class="gbadge__txt"><span><b>4.5+</b> <span class="stars">★★★★★</span></span><small>Rated on Google</small></span>
+          </p>
         </div>
-        <div class="tgrid">
-          <article class="tcard spot" data-reveal>
-            <header><span class="av">A</span><div><b>Ashish Bhutani</b><small>CEO, Bhutani Group</small></div><i class="q">❝</i></header>
-            <p>“AajNeeti did a great job driving leads to our new project in Noida. We were able to sell 50% of our units within two months of launching the campaign. I was happy with the results and would recommend them to any builder looking for a real estate marketing company.”</p>
-            <footer><span class="stars">★★★★★</span> 5.0</footer>
-          </article>
-          <article class="tcard spot" data-reveal style="--d:.08s">
-            <header><span class="av">S</span><div><b>Sarthak Gaur</b><small>Director, Gaur Group</small></div><i class="q">❝</i></header>
-            <p>“I am highly impressed with AajNeeti's work. They helped us generate 3,000 leads in just two weeks and we were able to close 20 deals as a direct result of their campaign. The team of experts dedicated to our project was very helpful and always available to answer our questions.”</p>
-            <footer><span class="stars">★★★★★</span> 5.0</footer>
-          </article>
-          <article class="tcard spot" data-reveal style="--d:.16s">
-            <header><span class="av">S</span><div><b>Simranjeet Sachdeva</b><small>Apex Group</small></div><i class="q">❝</i></header>
-            <p>“AajNeeti has a lot of experience with real estate marketing and it shows. They were able to help us rank higher on search engines and get more leads. We are very happy with the results of their work.”</p>
-            <footer><span class="stars">★★★★★</span> 5.0</footer>
-          </article>
-          <article class="tcard spot" data-reveal>
-            <header><span class="av">A</span><div><b>Anubhav Jain</b><small>CEO, Silverglades</small></div><i class="q">❝</i></header>
-            <p>“As a new builder, my main concern was making sure our project was visible to potential buyers. AajNeeti did a great job promoting our project online and offline. We were able to generate a lot of interest and sell all our units within six months.”</p>
-            <footer><span class="stars">★★★★★</span> 5.0</footer>
-          </article>
-          <article class="tcard spot" data-reveal style="--d:.08s">
-            <header><span class="av">A</span><div><b>Amandeep Singh</b><small>Asset Selection</small></div><i class="q">❝</i></header>
-            <p>“I was worried that my project might not be successful because it was located in a remote area. But AajNeeti's team was very confident and they assured me that they would be able to generate leads and close deals. They were right! We sold all our units within eight months.”</p>
-            <footer><span class="stars">★★★★★</span> 5.0</footer>
-          </article>
-          <article class="tcard spot" data-reveal style="--d:.16s">
-            <header><span class="av">S</span><div><b>Sudheer Agarwal</b><small>MD, Victory One Group</small></div><i class="q">❝</i></header>
-            <p>“I had a great experience working with AajNeeti. They are very professional and knows the real estate industry very well. They were able to help us generate a lot of leads and we were very happy with the results.”</p>
-            <footer><span class="stars">★★★★★</span> 5.0</footer>
-          </article>
+
+        <div class="testi__grid">
+          <div class="testi__stage" data-reveal>
+            <div class="deck" id="tDeck">
+              <div class="deck__back deck__back--2" aria-hidden="true"></div>
+              <div class="deck__back deck__back--1" aria-hidden="true"></div>
+              <div class="deck__cards" aria-live="polite">
+              <article class="tq is-active" style="--c:#990010" aria-hidden="false">
+                <header class="tq__head">
+                  <span class="tq__av">A</span>
+                  <span class="tq__who"><b>Ashish Bhutani</b><small>CEO, Bhutani Group</small></span>
+                  <span class="tq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M10 7H6a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2H5v2h1a4 4 0 0 0 4-4zm10 0h-4a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4z"/></svg></span>
+                </header>
+                <p class="tq__rating"><span class="stars">★★★★★</span><span>5.0</span></p>
+                <p class="tq__text">AajNeeti did a great job driving leads to our new project in Noida. We were able to sell 50% of our units within two months of launching the campaign. I was happy with the results and would recommend them to any builder looking for a real estate marketing company.</p>
+              </article>
+              <article class="tq" style="--c:#1d1d1f" aria-hidden="true">
+                <header class="tq__head">
+                  <span class="tq__av">S</span>
+                  <span class="tq__who"><b>Sarthak Gaur</b><small>Director, Gaur Group</small></span>
+                  <span class="tq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M10 7H6a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2H5v2h1a4 4 0 0 0 4-4zm10 0h-4a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4z"/></svg></span>
+                </header>
+                <p class="tq__rating"><span class="stars">★★★★★</span><span>5.0</span></p>
+                <p class="tq__text">I am highly impressed with AajNeeti's work. They helped us generate 3,000 leads in just two weeks and we were able to close 20 deals as a direct result of their campaign. The team of experts dedicated to our project was very helpful and always available to answer our questions.</p>
+              </article>
+              <article class="tq" style="--c:#c4122f" aria-hidden="true">
+                <header class="tq__head">
+                  <span class="tq__av">S</span>
+                  <span class="tq__who"><b>Simranjeet Sachdeva</b><small>Apex Group</small></span>
+                  <span class="tq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M10 7H6a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2H5v2h1a4 4 0 0 0 4-4zm10 0h-4a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4z"/></svg></span>
+                </header>
+                <p class="tq__rating"><span class="stars">★★★★★</span><span>5.0</span></p>
+                <p class="tq__text">AajNeeti has a lot of experience with real estate marketing and it shows. They were able to help us rank higher on search engines and get more leads. We are very happy with the results of their work.</p>
+              </article>
+              <article class="tq" style="--c:#3a3a3c" aria-hidden="true">
+                <header class="tq__head">
+                  <span class="tq__av">A</span>
+                  <span class="tq__who"><b>Anubhav Jain</b><small>CEO, Silverglades</small></span>
+                  <span class="tq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M10 7H6a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2H5v2h1a4 4 0 0 0 4-4zm10 0h-4a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4z"/></svg></span>
+                </header>
+                <p class="tq__rating"><span class="stars">★★★★★</span><span>5.0</span></p>
+                <p class="tq__text">As a new builder, my main concern was making sure our project was visible to potential buyers. AajNeeti did a great job promoting our project online and offline. We were able to generate a lot of interest and sell all our units within six months.</p>
+              </article>
+              <article class="tq" style="--c:#7a000d" aria-hidden="true">
+                <header class="tq__head">
+                  <span class="tq__av">A</span>
+                  <span class="tq__who"><b>Amandeep Singh</b><small>Asset Selection</small></span>
+                  <span class="tq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M10 7H6a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2H5v2h1a4 4 0 0 0 4-4zm10 0h-4a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4z"/></svg></span>
+                </header>
+                <p class="tq__rating"><span class="stars">★★★★★</span><span>5.0</span></p>
+                <p class="tq__text">I was worried that my project might not be successful because it was located in a remote area. But AajNeeti's team was very confident and they assured me that they would be able to generate leads and close deals. They were right! We sold all our units within eight months.</p>
+              </article>
+              <article class="tq" style="--c:#6e6e73" aria-hidden="true">
+                <header class="tq__head">
+                  <span class="tq__av">S</span>
+                  <span class="tq__who"><b>Sudheer Agarwal</b><small>MD, Victory One Group</small></span>
+                  <span class="tq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M10 7H6a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2H5v2h1a4 4 0 0 0 4-4zm10 0h-4a2 2 0 0 0-2 2v4h4v1a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4z"/></svg></span>
+                </header>
+                <p class="tq__rating"><span class="stars">★★★★★</span><span>5.0</span></p>
+                <p class="tq__text">I had a great experience working with AajNeeti. They are very professional and knows the real estate industry very well. They were able to help us generate a lot of leads and we were very happy with the results.</p>
+              </article>
+              </div>
+            </div>
+            <div class="tctrl">
+              <div class="tdots" id="tDots" role="tablist" aria-label="Reviews"></div>
+              <p class="tswipe"><span class="tswipe__l">←</span> Swipe to explore <span class="tswipe__r">→</span></p>
+              <div class="tnavs">
+                <button class="tnav" data-dir="-1" aria-label="Previous review"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m15 6-6 6 6 6"/></svg></button>
+                <button class="tnav" data-dir="1" aria-label="Next review"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="tside" data-reveal style="--d:.12s">
+            <p class="tside__label">All reviews</p>
+            <div class="tlist" id="tList">
+            <button class="tli is-active" style="--c:#990010" data-i="0" aria-label="Show review from Ashish Bhutani">
+              <span class="tli__av">A</span>
+              <span class="tli__txt"><b>Ashish Bhutani</b><small>CEO, Bhutani Group</small></span>
+              <span class="tli__pip"></span>
+            </button>
+            <button class="tli" style="--c:#1d1d1f" data-i="1" aria-label="Show review from Sarthak Gaur">
+              <span class="tli__av">S</span>
+              <span class="tli__txt"><b>Sarthak Gaur</b><small>Director, Gaur Group</small></span>
+              <span class="tli__pip"></span>
+            </button>
+            <button class="tli" style="--c:#c4122f" data-i="2" aria-label="Show review from Simranjeet Sachdeva">
+              <span class="tli__av">S</span>
+              <span class="tli__txt"><b>Simranjeet Sachdeva</b><small>Apex Group</small></span>
+              <span class="tli__pip"></span>
+            </button>
+            <button class="tli" style="--c:#3a3a3c" data-i="3" aria-label="Show review from Anubhav Jain">
+              <span class="tli__av">A</span>
+              <span class="tli__txt"><b>Anubhav Jain</b><small>CEO, Silverglades</small></span>
+              <span class="tli__pip"></span>
+            </button>
+            <button class="tli" style="--c:#7a000d" data-i="4" aria-label="Show review from Amandeep Singh">
+              <span class="tli__av">A</span>
+              <span class="tli__txt"><b>Amandeep Singh</b><small>Asset Selection</small></span>
+              <span class="tli__pip"></span>
+            </button>
+            <button class="tli" style="--c:#6e6e73" data-i="5" aria-label="Show review from Sudheer Agarwal">
+              <span class="tli__av">S</span>
+              <span class="tli__txt"><b>Sudheer Agarwal</b><small>MD, Victory One Group</small></span>
+              <span class="tli__pip"></span>
+            </button>
+            </div>
+          </aside>
         </div>
       </div>
       <div class="horizon" aria-hidden="true"></div>
@@ -838,6 +921,6 @@
   </footer>
 
   <a href="#top" class="totop" aria-label="Back to top">↑</a>
-  <script src="script.js?v=4" defer></script>
+  <script src="script.js?v=7" defer></script>
 </body>
 </html>

@@ -285,6 +285,61 @@
     }
   }
 
+  /* ---------- Testimonials: card deck + "All reviews" list ---------- */
+  const tSec = $('#testimonials');
+  const tCards = $$('.tq'), tItems = $$('.tli'), tDeck = $('#tDeck'), tDots = $('#tDots');
+  if (tCards.length) {
+    const TDUR = 6500;
+    tSec.style.setProperty('--tdur', TDUR + 'ms');
+    tCards.forEach((_, i) => {
+      const b = document.createElement('button');
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-label', `Review ${i + 1}`);
+      b.addEventListener('click', () => showT(i));
+      tDots.appendChild(b);
+    });
+    const dots = $$('button', tDots);
+    let ti = 0, tTimer = null, tPaused = false, tVisible = false;
+    function showT(n) {
+      const next = (n + tCards.length) % tCards.length;
+      if (next !== ti) {
+        const out = tCards[ti];
+        out.classList.remove('is-active');
+        out.classList.add('is-out');
+        setTimeout(() => out.classList.remove('is-out'), 700);
+        tDeck.classList.add('is-flip');
+        setTimeout(() => tDeck.classList.remove('is-flip'), 450);
+      }
+      ti = next;
+      tCards.forEach((c, k) => { c.classList.toggle('is-active', k === ti); c.setAttribute('aria-hidden', k !== ti); });
+      dots.forEach((d, k) => { d.classList.toggle('is-active', k === ti); d.setAttribute('aria-selected', k === ti); });
+      tItems.forEach((it, k) => {
+        it.classList.remove('is-active');
+        if (k === ti) { void it.offsetWidth; it.classList.add('is-active'); }
+      });
+      scheduleT();
+    }
+    function scheduleT() {
+      clearTimeout(tTimer);
+      if (tVisible && !tPaused && !reduce) tTimer = setTimeout(() => showT(ti + 1), TDUR);
+    }
+    tItems.forEach((it, k) => it.addEventListener('click', () => showT(k)));
+    $$('.tnav').forEach(b => b.addEventListener('click', () => showT(ti + Number(b.dataset.dir))));
+    const tGrid = $('.testi__grid');
+    tGrid.addEventListener('mouseenter', () => { tPaused = true; tSec.classList.add('is-paused'); clearTimeout(tTimer); });
+    tGrid.addEventListener('mouseleave', () => { tPaused = false; tSec.classList.remove('is-paused'); showT(ti); });
+    let tsx = null;
+    tDeck.addEventListener('touchstart', e => { tsx = e.touches[0].clientX; }, { passive: true });
+    tDeck.addEventListener('touchend', e => {
+      if (tsx === null) return;
+      const dx = e.changedTouches[0].clientX - tsx;
+      if (Math.abs(dx) > 40) showT(ti + (dx < 0 ? 1 : -1));
+      tsx = null;
+    });
+    new IntersectionObserver(([e]) => { tVisible = e.isIntersecting; if (tVisible) showT(ti); else clearTimeout(tTimer); }, { threshold: 0.3 }).observe(tGrid);
+    showT(0);
+  }
+
   /* ---------- Market tabs (auto-advance until the user picks one) ---------- */
   const tabs = $$('.tab'), panels = $$('.tp');
   let tabIdx = 0, tabTimer = null, userPicked = false;
